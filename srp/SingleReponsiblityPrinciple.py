@@ -32,20 +32,20 @@ class Journal:
 
 class PersistenceManager:
     @staticmethod
-    def save_to_file(journal, file):
-        file = open(file, 'w')
-        file.write(str(journal))
-        file.close()
+    def save_to_file(journal, filename):
+        filename = open(filename, 'w')
+        filename.write(str(journal))
+        filename.close()
 
 
 j1 = Journal()
 j1.add_entry("I feel very bad today")
 j1.add_entry("I cried today")
 j1.add_entry("All is well")
-#print(j1)
+# print(j1)
 
-file = r'./journals.txt'
-PersistenceManager.save_to_file(j1,file)
+filename = r'./journals.txt'
+PersistenceManager.save_to_file(j1, filename)
 
-with open(file,'r') as rh:
+with open(filename, 'r') as rh:
     print(rh.read())
