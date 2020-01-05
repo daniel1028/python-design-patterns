@@ -86,4 +86,4 @@ class MultiFunctionDevice(MultiDevice):
     def fax(self, document):
         self.fax(document)
 
-# You can segregate and use the Interfaces like this. Having one interce is not good idea
+# You can segregate and use the Interfaces like this. Having one interface is not good idea
